@@ -1,0 +1,167 @@
+<!--
+type html, then press tab, skeleton will be produced automatically in sublime text
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML Great Learning</title>
+</head>
+<body>
+	 <h1 align="center" style="color:blanchedalmond;"><strong>HTML Great Learning</strong></h1>
+     <!--
+     write <p></p>, within this tag type lorem and press tab, it will produce a random paragraph
+     -->
+     <!-- paragraph element -->
+     
+     <h2 style="color:palevioletred;">Paragraph tag </h2>
+	<p style="color:indianred;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+	<br>
+	<hr>
+	<br>
+     
+     <h2 style="color:orangered;">Ordered list</h2>
+     <ol style="color:springgreen;">
+     	<li><b>Bold tag</b></li>
+     	<li><i>Italic tag</i></li>
+     	<li><em>Emphasis tag</em></li>
+     	<li><strong>Strong tag</strong></li>
+     	<li><sup>Superscript tag</sup></li>
+     	<li><sub>Subscript tag</sub></li>
+     </ol>
+
+    <br>
+	<br>
+
+	<h2 style="color:darkolivegreen;">Unordered list</h2>
+     <ul style="color:darkblue;">
+     	<li><b>Bold tag</b></li>
+     	<li><i>Italic tag</i></li>
+     	<li><em>Emphasis tag</em></li>
+     	<li><strong>Strong tag</strong></li>
+     	<li><sup>Superscript tag</sup></li>
+     	<li><sub>Subscript tag</sub></li>
+     </ul>
+     
+    <br>
+	<hr>
+	<br>
+     
+     <h2 style="color:green;">Image tag</h2>
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5kve8uJvA1JcDmKbSh1a_JFvLt5tUI8n2A&usqp=CAU" alt="Not able to load" title="HTML" width="100" height="100" border="2">
+
+    <br>
+	<br>
+    
+    <h2 style="color:blueviolet;">Link tag</h2>
+    <a href="https://olympus.greatlearning.in/courses/12761">HTML from Great Learning</a>
+
+    <br>
+    <hr>
+	<br>
+
+	<h2 style="color:rebeccapurple;">Table tag</h2>
+	<table border="1">
+		<thead>
+			<tr style="color:plum;">
+			   <th>heading 1</th>
+			   <th>heading 2</th>
+			   <th>heading 3</th>
+		    </tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>cell10</td>
+				<td>cell11</td>
+				<td>cell12</td>
+			</tr>
+			<tr>
+				<td>cell20</td>
+				<td>cell21</td>
+				<td>cell22</td>
+			</tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+     
+     <h2 style="color:mediumvioletred;">Form tag</h2>
+    <form style="color:darkviolet;">
+    	<label>First Name: <input type="firstname" name="firstname" placeholder="firstname" required></label><br><br>
+    	<label>Last Name: <input type="lastname" name="lastname" placeholder="lastname" required></label><br><br>
+
+    	<label>Male: <input type="radio" name="gender" value="male"></label></br>
+    	<label>Female: <input type="radio" name="gender" value="female"></label></br>
+    	<label>Other: <input type="radio" name="gender" value="other"></label><br><br>
+
+    	<label>PWD: <input type="checkbox" name="checkbox" value="PWD"></label></br>
+    	<label> Not PWD: <input type="checkbox" name="checkbox" value=" Not PWD"></label><br><br>
+         
+        <label>E-mail: <input type="email" name="email" placeholder="your email" required></label><br><br>
+
+    	<label>Password: <input type="password" name="password" placeholder="insert password" required></label><br><br>
+
+    	<label for="">DOB: </label>
+    	<select id="birthday" name="Month">
+    		<option>Month</option>
+    		<option>Jan</option>
+    		<option>Feb</option>
+    		<option>Mar</option>
+    		<option>Apr</option>
+    		<option>May</option>
+    		<option>Jun</option>
+    		<option>Jul</option>
+    		<option>Aug</option>
+    		<option>Sep</option>
+    		<option>Oct</option>
+    		<option>Nov</option>
+    		<option>Dec</option>
+    	</select>
+    	<select id="birthday" name="Day">
+    		<option>Day</option>
+    		<option>1</option>
+    		<option>2</option>
+    		<option>3</option>
+    		<option>4</option>
+    		<option>5</option>
+    		<option>6</option>
+    		<option>7</option>
+    		<option>8</option>
+    		<option>9</option>
+    		<option>10</option>
+    		<option>11</option>
+    		<option>12</option>
+    	</select>
+    	<select id="birthday" name="Year">
+    		<option>Year</option>
+    		<option>1997</option>
+    		<option>1998</option>
+    		<option>1999</option>
+    		<option>2000</option>
+    		<option>2001</option>
+    		<option>2002</option>
+    		<option>2003</option>
+    		<option>2004</option>
+    		<option>2005</option>
+    		<option>2006</option>
+    		<option>2007</option>
+    		<option>2008</option>
+    	</select><br><br>
+
+    	<label>agree to terms and conditions
+    		<input type="checkbox" name="check">
+    	</label><br><br>
+
+    	<input type="submit" name="submit">
+    </form>
+
+</body>
+</html>
