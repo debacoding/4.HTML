@@ -1,0 +1,230 @@
+<!-- <article>,<aside>,<audio>,<canvas>,<datalist>,
+<details>,<embed>,<footer>,<header>,<nav>,<output>,
+<progress>,<section>,<video>,    -->
+
+<!-- content models
+	Metadata: <base>, <link>, <meta>, <noscript>, <script>, <style>, <title>
+    Embedded: <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg>
+    Interactive:  <a>, <audio>, <video>, <button>, <details>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea>
+    Heading:  <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <hgroup>
+    Phrasing: <img>, <span>, <strong>, <label>, <br />, <small>, <sub>
+    Flow content:
+    Sectioning content: <article>, <aside>, <nav>, <section>	
+-->    	
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5</title>
+</head>
+
+<body>
+	<header>
+		<h1 align="center" style="color:seagreen;"> HTML5 notes</h1>
+		<hr>
+
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Topics</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<h1>Article Title</h1>
+
+			<section>
+				<h1>Heading</h1>
+			</section>
+
+			<aside>
+				<p>...</p>
+			</aside>
+		</article>
+
+		<audio controls>
+			<source src="audio.mp3" type="audio/mpeg">
+			<source src="audio.ogg" type="audio/ogg">
+			<source src="audio.wav" type="audio/wav">	
+        </audio>
+        <!--
+        <audio src="audio.mp3" controls>
+			Audio element not supported by your browser
+		</audio>	
+		<audio controls autoplay>
+		<audio controls autoplay loop>	
+		-->		
+        <br>
+        <video controls>
+			<source src="video.mp4" type="video/mp4">
+			<source src="video.ogg" type="video/ogg">
+			<source src="video.webM" type="video/webM">	
+        </video>
+        <!--
+		<video controls autoplay>
+		<video controls autoplay loop>	
+		-->
+        <br>
+		Status: <progress value="35" min="0" max="100">
+		</progress>
+
+		<!-- web storage API
+			localStorage.setItem("key1","value1");
+			alert(localStorage.getItem("key1"));
+			localStorage.removeItem("key1");
+			localStorage.clear();
+
+			session.setItem("key1","value1");
+			alert(session.getItem("key1"));
+			session.removeItem("key1");
+			session.clear();
+		-->
+        <!-- scalable vector graphics -->
+        <img src="image.svg" alt=""  height="300"/>
+
+       <br>
+        <svg width="200" height="200">
+        	<circle cx="80" cy="80" r="50" fill="green"/>
+        </svg>
+
+        <svg width="200" height="200">
+        	<rect width="300" height="100" x="20" y="20" fill="blue">
+        	<animate attributeName="x" from="0" to="300" dur="5s" fill="freeze" repeatCount="indefinite"/>
+        	</rect>	
+        </svg>
+
+        <svg width="1000" height="500">
+        	<ellipse cx="200" cy="100" rx="150" ry="70" style="fill:palevioletred;"/>
+        </svg>
+
+        <svg width="1000" height="200">
+        	<polygon points="100 100, 200 200, 300 0" style="fill:rosybrown;stroke:  black;"/>
+        </svg>
+
+        <svg width="500" height="500">
+        <!-- 
+        M: moveto
+        L: lineto
+        H: horizontal lineto
+        V: vertical lineto
+        C: curveto
+        S: smooth curveto
+        Q: quadratic Bézier curve
+        T: smooth quadratic Bézier curveto
+        A: elliptical Arc
+        Z: closepath
+        -->
+	
+        <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;fill:lightcyan;" />
+        </svg>
+
+        <canvas id="canvas1" width="200" height="100">
+        </canvas>
+        <!--
+       <html>
+       <head></head>
+       <body>
+         <canvas id="canvas1" width="400" height="300"></canvas> 
+         <script>
+           var c = document.getElementById("canvas1"); 
+           var ctx = c.getContext("2d");
+           ctx.fillRect(20,20,100,100);
+           ctx.fillStyle="rgba(0,200,0,1)";
+         </script>
+
+        </body>
+        </html>
+        -->
+<!--
+Draw a Line
+moveTo(x,y): Defines the starting point of the line.
+lineTo(x,y): Defines the ending point of the line.
+
+Draw a Circle
+beginPath(): Starts the drawing.
+arc(x,y,r,start,stop): Sets the parameters of the circle.
+stroke(): Ends the drawing.
+
+Gradients
+createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+Drawing Text on the Canvas
+Font: Defines the font properties for the text.
+fillText(text,x,y): Draws "filled" text on the canvas.
+strokeText(text,x,y): Draws text on the canvas (no fill).
+
+ctx.font="bold 22px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start",10,30);
+
+ctx.translate(100,150);
+ctx.fillText("after translate",10,30);
+
+ctx.fillStyle="#FF0000";
+ctx.fillRect(10,10,100,100);
+ctx.rotate((Math.PI / 100)*25);
+ctx.fillStyle="#0000FF";
+ctx.fillRect(10,10,100,100);
+
+-->	
+
+     <form autocomplete="off">
+       <input id="mysearch" name="search" type="search" placeholder="Search" list="colors" /></br><br><br><br><br>
+       <datalist id="colors">
+       	<option value="Red">
+       	<option value="Green">
+       	<option value="Yellow">	
+       </datalist>
+       <label for="name">Username*:</label>
+       <input type="text" name="username" autofocus required /><br /><br>
+       <label for="password">Password*:</label>
+  	   <input type="password" name="password"autofocus required/><br /><br>
+  	   <label for="email">E-mail*:  </label>
+  	   <input id="email" type="email" name="email" placeholder="email@example.com" autofocus required/></br><br>
+  	   <label for="tel">Phone*:  </label>
+  	   <input id="tel" type="tel" name="tel" placeholder="0123456789" autofocus required/></br><br><br>
+  	   <input type="submit" name="SUBMIT">
+
+<!--
+HTML5 added several new input types:
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+New input attributes in HTML5:
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+-->  	   
+
+     </form>        
+	</header>
+
+</body>
+</html>
